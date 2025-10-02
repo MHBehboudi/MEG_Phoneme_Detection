@@ -1,1 +1,45 @@
 
+# config/default_config.py
+
+import torch
+
+# PATHS
+BASE_PATH = "./libribrain_data"
+SUBMISSION_PATH = "libribrain_data/submissions"
+PRED_PATH = "libribrain_data/preds"
+
+# TASK CONSTANTS
+NUM_PHONEME_CLASSES = 39
+NUM_TOTAL_MEG_CHANNELS = 306
+WINDOW_T = 125  # 0..0.5s @ 250Hz
+
+# TRAINING DEFAULTS
+BATCH_SIZE = 16
+LEARNING_RATE_STAGE1 = 3e-4
+LEARNING_RATE_STAGE2 = 3e-5
+TARGET_EPOCH_SAMPLES = 30_000
+NUM_WORKERS = 16
+MIXED_PRECISION = "16-mixed"
+
+# DATA AVERAGING SETUP
+TRAIN_AVG_K_STAGE1 = 32
+TRAIN_AVG_K_STAGE2_FIXED = 100
+VAL_AVG_K = 100
+MULTIK_MIN = 60
+MULTIK_MAX = 100
+MULTIK_STEP = 10
+
+# MODEL HYPERPARAMS
+CONV_DIM = 256
+ATTN_DIM = 128
+LSTM_LAYERS = 2
+BI_DIRECTIONAL = True
+DROPOUT_RATE = 0.4
+
+# Data wrapper knobs
+DROP_REMAINING = False
+WRAPPER_STANDARDIZE = False
+
+# CUDNN autotune
+torch.backends.cudnn.benchmark = True
+torch.set_float32_matmul_precision("high")
