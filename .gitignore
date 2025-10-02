@@ -1,0 +1,12 @@
+# Python
+__pycache__/
+*.pyc
+
+# IDE/System Files
+.DS_Store
+
+# Data and Artifacts
+libribrain_data/data/
+libribrain_data/models/*.ckpt
+libribrain_data/preds/*.npy
+libribrain_data/lightning_logs/
