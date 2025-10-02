@@ -15,21 +15,6 @@ This model employs a specialized two-stage training regimen combined with label-
 | **Preprocessing** | Standardized z-scoring is applied globally by the base dataset loader, with optional **per-sample z-scoring** enabled during fine-tuning for improved generalization. |
 | **Inference** | Uses **Test-Time Augmentation (TTA)** with temporal shifts (`-6` to `+6` time steps) to average predictions and improve robustness. |
 
-## Quick Start
-
-### Prerequisites
-
-1.  **Clone the Repository:**
-    ```bash
-    git clone [https://github.com/YourUsername/LibriBrain-Phoneme-Detection.git](https://github.com/YourUsername/LibriBrain-Phoneme-Detection.git)
-    cd LibriBrain-Phoneme-Detection
-    ```
-2.  **Install Dependencies:**
-    ```bash
-    pip install -r requirements.txt
-    ```
-3.  **Data Setup:**
-    Follow the official competition guidelines to download the LibriBrain data and place it in the expected directory structure (`./libribrain_data/data/`).
 
 ### Training and Submission
 
@@ -37,7 +22,7 @@ The primary script orchestrates the two-stage training, prediction dumping, and 
 
 ```bash
 # Run the complete two-stage training and submission
-python src/train_lstm_v12_submit.py \
+python src/SCRIPT.py \
     --mode train_and_submit \
     --stage1_epochs 15 \
     --stage2_epochs 30 --stage2_lr 2e-5 \
