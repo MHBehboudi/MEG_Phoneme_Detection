@@ -1,1 +1,11 @@
+# Core ML/DL Libraries
+torch
+lightning
+torchmetrics
+numpy
 
+# Competition Libraries
+pnpl
+
+# Other Utilities
+argparse
