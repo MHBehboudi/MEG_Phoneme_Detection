@@ -1,8 +1,8 @@
-# LibriBrain Phoneme Detection - Advanced Two-Stage LSTM Model (v12)
+# Phoneme Detection - Advanced Two-Stage LSTM Model
 
-This repository contains the code for my submission to the **LibriBrain Competition 2025: Phoneme Detection from MEG** track, hosted by the Neural Processing Lab.
+This repository contains the code for  Phoneme Detection from MEG.
 
-My best-performing model, **`lstm_v12`**, employs a specialized two-stage training regimen combined with label-averaging techniques to effectively learn from the noisy Magnetoencephalography (MEG) data.
+This model employs a specialized two-stage training regimen combined with label-averaging techniques to effectively learn from the noisy Magnetoencephalography (MEG) data.
 
 ## Model Approach
 
